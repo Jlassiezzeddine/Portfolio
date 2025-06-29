@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+  <defs>
+    <style>
+      .cls-1 {
+      fill: #fff;
+      }
+
+      .cls-2 {
+      font-family: Anton-Regular, Anton;
+      font-size: 19px;
+      }
+
+      .cls-3 {
+      opacity: 0;
+      }
+
+      .cls-3, .cls-4 {
+      fill: #231f20;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <rect class="cls-4" width="72" height="72" rx="2" ry="2" />
+      <text class="cls-2" transform="translate(35.86 27.33)">
+        <tspan class="cls-1" x="0" y="0">WE </tspan>
+        <tspan class="cls-3" x="25.8" y="0">.</tspan>
+        <tspan class="cls-1">
+          <tspan x="-12.24" y="19">CRAFT</tspan>
+        </tspan>
+        <tspan class="cls-1">
+          <tspan x="-20.33" y="38">BYTES .</tspan>
+        </tspan>
+      </text>
+    </g>
+  </g>
+</svg>
