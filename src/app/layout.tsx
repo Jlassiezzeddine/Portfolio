@@ -37,7 +37,7 @@ export default async function RootLayout({
         <body className={inter.className}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <main className={"min-h-svh relative"}>
-              <div className="fixed top-12 right-12">
+              <div className="fixed top-4 right -4 lg:top-12 lg:right-12">
                 <ThemeToggle />
               </div>
               {children}
