@@ -1,10 +1,10 @@
+import { ThemeProvider } from "@/shared/components/theme-provider";
+import { ThemeToggle } from "@/shared/components/theme-toggle";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import GoogleAnalytics from "../shared/components/GoogleAnalytics";
 import SmoothScroll from "../shared/components/SmoothScroll";
 import "./globals.css";
-import GoogleAnalytics from "../shared/components/GoogleAnalytics";
-import { ThemeProvider } from "@/shared/components/theme-provider";
-import Navigation from "@/shared/components/Navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,12 +36,11 @@ export default async function RootLayout({
       <html lang="en" suppressHydrationWarning>
         <body className={inter.className}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <main className={"min-h-svh"}>
-              <Navigation />
-
-              <div className="max-w-screen-xl w-full h-full mx-auto grid gap-16 place-content-center md:grid-cols-2">
-                {children}
+            <main className={"min-h-svh relative"}>
+              <div className="fixed top-12 right-12">
+                <ThemeToggle />
               </div>
+              {children}
             </main>
           </ThemeProvider>
         </body>

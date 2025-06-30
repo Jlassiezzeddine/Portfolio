@@ -1,66 +1,115 @@
+import { Badge } from "@/components/ui/badge";
 import { Icon } from "@/shared/components/Icon";
 import { Card, CardContent, CardHeader } from "@/shared/components/ui/card";
-import { IExperience } from "@/shared/data/experience.type";
-import parse from "html-react-parser";
+import { Experience } from "@/shared/data/experience";
+
 import Image from "next/image";
 import Link from "next/link";
 
 function ExperienceBox({
   occupation,
   company,
-  companyLogo,
-  companyUrl,
   startDate,
   endDate,
-  description,
-}: IExperience) {
+  tools,
+  responsabilities,
+  stack,
+  client,
+}: Experience) {
   return (
-    <Card className="bg-transparent text-inherit border-none shadow-none py-6">
-      <CardHeader className="pb-2 grid gap-2">
+    <Card>
+      <CardHeader>
         <h3 className="text-sm tracking-wide ">
           {startDate} - {endDate}
         </h3>
-        <div className="flex flex-col md:flex-row gap-4 w-full ">
-          <div className=" w-14 aspect-square p-2 bg-blue-50 rounded-md overflow-clip shrink-0">
-            <div className="relative size-full">
-              <Image
-                src={companyLogo}
-                alt={`${company}'s logo`}
-                fill
-                className="object-contain"
-              />
+        <div className="flex justify-between w-full">
+          <div className="flex flex-col lg:flex-row gap-4 w-full  lg:items-end">
+            <div className=" size-14  p-2 bg-accent dark:bg-accent-foreground rounded-md overflow-clip shrink-0">
+              <div className="relative size-full">
+                <Image
+                  src={company.logo}
+                  alt={`${company.name}'s logo`}
+                  fill
+                  className="object-contain"
+                />
+              </div>
             </div>
-          </div>
-          <div className="w-full">
-            <h3 className=" font-semibold text-lg">{occupation}</h3>
-            <div className="flex gap-1 items-center">
-              <p>
-                {companyUrl ? (
-                  <Link
-                    target="_blank"
-                    href={companyUrl}
-                    className="inline-flex items-center"
-                  >
-                    <span>{`@${company}`}</span>
-                    <Icon icon="arrow-up-right" size="md" />
-                  </Link>
-                ) : (
-                  <span>{`@${company}`}</span>
-                )}
-              </p>
+            <div className="flex gap-8 items-end">
+              <div >
+                <h3 className=" font-semibold text-lg">{occupation}</h3>
+                <div className="flex gap-1 items-center">
+                  {company.url ? (
+                    <Link
+                      target="_blank"
+                      href={company.url}
+                      className="inline-flex items-center"
+                    >
+                      <span>{`@${company.name}`}</span>
+                      <Icon icon="arrow-up-right" size="md" />
+                    </Link>
+                  ) : (
+                    <span>{`@${company.name}`}</span>
+                  )}
+                </div>
+              </div>
+              {client && (
+                <div className="flex  gap-4 items-center ">
+                  <div className="p-2 bg-accent dark:bg-accent-foreground  aspect-square size-7 rounded-md overflow-clip">
+                    <div className="relative size-full">
+                      <Image
+                        src={client.logo}
+                        alt={`${client.name}'s logo`}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full flex gap-1 items-center flex-nowrap">
+                    {client.url ? (
+                      <Link
+                        target="_blank"
+                        href={client.url}
+                        className="inline-flex items-center "
+                      >
+                        <span className="text-nowrap">{`@${client.name} `}</span>
+                        <Icon icon="arrow-up-right" size="md" />
+                      </Link>
+                    ) : (
+                      <span>{`@${client.name}`}</span>
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </CardHeader>
-      <CardContent>
-        <ul className="font-normal list-disc list-inside">
-          {description.map((el, idx) => (
-            <li key={idx} className="mt-1 text-sm">
-              <span className="[&>a]:text-primary">{parse(el)}</span>
-            </li>
+      <CardContent className="space-y-4">
+        <h3 className="text-sm">Key responsabilities:</h3>
+        <div className="flex gap-1 flex-wrap">
+          {responsabilities.map((el, idx) => (
+            <Badge key={idx} variant="outline">
+              {el}
+            </Badge>
           ))}
-        </ul>
+        </div>
+
+        <h4 className="text-sm">Stack & Tools:</h4>
+        <div className="flex gap-1 flex-wrap">
+          {[...stack, ...tools].map((el, idx) => (
+            <Badge key={idx} variant="outline">
+              {el}
+            </Badge>
+          ))}
+        </div>
       </CardContent>
+      {/* <CardFooter>
+        <Button asChild >
+          <Link href={`experience/${company.name}`}>
+          
+          Read more</Link>
+          </Button>
+      </CardFooter> */}
     </Card>
   );
 }

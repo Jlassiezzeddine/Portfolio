@@ -1,6 +1,6 @@
+import { cn } from "@/shared/lib/utils";
 import { createElement } from "react";
 import { ICONS_MAP } from "./iconsMap";
-import { cn } from "@/shared/lib/utils";
 
 export const iconSize = {
   sm: "w-4 h-4",

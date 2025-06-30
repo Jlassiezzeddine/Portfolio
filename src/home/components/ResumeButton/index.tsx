@@ -1,15 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React from "react";
 import { Icon } from "@/shared/components/Icon";
-import Link from "next/link";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/shared/components/ui/dropdown-menu";
-import { Button } from "../../../shared/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "../../../shared/components/ui/button";
 const IS_EN_ONLY = true;
 function ResumeButton() {
   const event = ({ action, category, label, value }: any) => {
@@ -37,8 +36,8 @@ function ResumeButton() {
           target="_blank"
           className="flex gap-2 items-center"
         >
+          Resume
           <Icon icon="download" size="sm" />
-          <span className="pr-2">Resume</span>
         </Link>
       </Button>
     );
