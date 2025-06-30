@@ -10,12 +10,12 @@ export default function Presentation() {
     <div className="lg:sticky top-0 self-start flex items-end lg:items-center w-full  h-dvh">
       <div className="py-12 h-fit lg:h-dvh px-4  flex flex-col   gap-8 lg:justify-between">
         <div className="grid gap-4">
-          <div className="relative size-10 lg:size-32 rounded-full overflow-clip shadow">
+          <div className="relative size-12 lg:size-32 rounded-full overflow-clip shadow">
             <Image
               src={"/avatar_250x250.png"}
               alt={`Ezzeddine Jlassi avatar`}
               fill
-              className="object-cover scale-125 translate-y-2 object-top"
+              className="object-cover scale-125 lg:translate-y-2 object-top"
             />
           </div>
           <h1 className="font-bold text-2xl mt-8">
