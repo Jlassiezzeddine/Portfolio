@@ -18,7 +18,7 @@ export default function Presentation() {
               className="object-cover scale-125 lg:translate-y-2 object-top"
             />
           </div>
-          <h1 className="font-bold text-2xl mt-8">
+          <h1 className="font-bold text-2xl mt-4 lg:mt-8">
             Ezzeddine Jlassi - Fullstack Developer
           </h1>
           <p className="text-base tracking-wide">
