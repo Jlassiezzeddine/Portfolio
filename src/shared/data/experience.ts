@@ -2,6 +2,24 @@ export const experiences: Experience[] = [
   {
     occupation: "Frontend developer",
     company: {
+      name: "SESAMm",
+      logo: "/logos/sesamm.jpeg",
+      url: "https://www.sesamm.com/",
+    },
+
+    remote: "Hybrid",
+    startDate: "Sep 2025",
+    endDate: "Today",
+    description: [
+      "Using my technical proficiency and creativity to develop and maintain cool user experiences <a href='https://www.sesamm.com/' target='_blank'><u>@SESAMm</u></a>.",
+    ],
+    responsabilities: ["Feature implementations", "Code reviews"],
+    stack: ["Typescript", "ReactJS", "MUI", "Mobx"],
+    tools: ["Amplitude", "Figma", "Jira"],
+  },
+  {
+    occupation: "Frontend developer",
+    company: {
       name: "Dune Technology Ltd.",
       logo: "/logos/dunetech.svg",
       url: "https://www.dunetech.co.uk/",
