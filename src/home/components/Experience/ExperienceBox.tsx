@@ -12,7 +12,7 @@ function ExperienceBox({
   startDate,
   endDate,
   tools,
-  responsabilities,
+  responsibilities,
   stack,
   client,
 }: Experience) {
@@ -35,7 +35,7 @@ function ExperienceBox({
               </div>
             </div>
             <div className="flex gap-8 items-end">
-              <div >
+              <div>
                 <h3 className=" font-semibold text-lg">{occupation}</h3>
                 <div className="flex gap-1 items-center">
                   {company.url ? (
@@ -85,9 +85,9 @@ function ExperienceBox({
         </div>
       </CardHeader>
       <CardContent className="space-y-4">
-        <h3 className="text-sm">Key responsabilities:</h3>
+        <h3 className="text-sm">Key responsibilities:</h3>
         <div className="flex gap-1 flex-wrap">
-          {responsabilities.map((el, idx) => (
+          {responsibilities.map((el, idx) => (
             <Badge key={idx} variant="outline">
               {el}
             </Badge>

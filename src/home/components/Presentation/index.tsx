@@ -21,15 +21,15 @@ export default function Presentation() {
           <h1 className="font-bold text-2xl mt-4 lg:mt-8">
             Ezzeddine Jlassi - Fullstack Developer
           </h1>
-          <p className="text-base tracking-wide">
+          <p className="text-sm tracking-wide">
             TypeScript, ReactJS, NextJS, ExpressJS, C#, .NET
           </p>
-          <h2 className="text-base tracking-wide">
+          <h2 className="text-sm tracking-wide">
             Fullstack developer with 4+ years of experience building scalable
             web applications using modern frontend and backend technologies with
             a strong focus on clean, efficient code and user-centric solutions.
           </h2>
-          <p>Based in Tunisia 🇹🇳</p>
+          <p className="text-sm">Based in Tunisia 🇹🇳</p>
           <div className="flex items-center gap-4 h-9 mt-4">
             <Button asChild className="cursor-pointer" variant="outline">
               <Link
@@ -43,10 +43,10 @@ export default function Presentation() {
           </div>
         </div>
         <div className="space-y-4">
-          <h3>Checkout my latest project:</h3>
+          <h3 className="text-sm">Checkout my latest project:</h3>
           <Button variant="outline" className="w-fit" asChild>
             <Link href="https://buzzerbeatermusic.com" target="_blank">
-            Buzzerbeater Music <Icon icon="arrow-up-right" size="sm" />
+              Buzzerbeater Music <Icon icon="arrow-up-right" size="sm" />
             </Link>
           </Button>
         </div>

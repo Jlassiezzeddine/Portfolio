@@ -9,12 +9,16 @@ export const experiences: Experience[] = [
 
     remote: "Hybrid",
     startDate: "Sep 2025",
-    endDate: "Today",
+    endDate: "Feb 2026",
     description: [
       "Using my technical proficiency and creativity to develop and maintain cool user experiences <a href='https://www.sesamm.com/' target='_blank'><u>@SESAMm</u></a>.",
     ],
-    responsabilities: ["Feature implementations", "Code reviews"],
-    stack: ["Typescript", "ReactJS", "MUI", "Mobx"],
+    responsibilities: [
+      "Feature implementations",
+      "Code reviews",
+      "Performance optimization",
+    ],
+    stack: ["Typescript", "ReactJS", "MUI", "Mobx", "NestJS"],
     tools: ["Amplitude", "Figma", "Jira"],
   },
   {
@@ -35,7 +39,7 @@ export const experiences: Experience[] = [
     description: [
       "Using my technical proficiency and creativity to develop and maintain cool user experiences <a href='https://obrizum.com/' target='_blank'><u>@Obrizum</u></a>.",
     ],
-    responsabilities: [
+    responsibilities: [
       "I18n",
       "A11y",
       "Feature & POCs implementations",
@@ -71,7 +75,7 @@ export const experiences: Experience[] = [
       "Build Obeyaka's <a href='https://www.obeyaka.com' target='_blank'><u>landing page</u></a>.",
       "Built 10+ features based on micro-frontends architecture using Next JS.",
     ],
-    responsabilities: [
+    responsibilities: [
       "MVP",
       "Project foundation",
       "UI Library",
@@ -93,7 +97,7 @@ export const experiences: Experience[] = [
       "Built 8+ chart components using Fusion Charts, Chart.JS and D3.",
       "Built 10+ forms using React Hook Form",
     ],
-    responsabilities: ["Feature integrations", "User experience"],
+    responsibilities: ["Feature integrations", "User experience"],
     stack: [
       "Typescript",
       "ReactJS",
@@ -122,7 +126,7 @@ export const experiences: Experience[] = [
       "Reduced server’s memory consumption by 30% which reduced the api response time by up to 400ms, by writing 14+ SQL views and implementing best practices to improve Entity Framework performance.",
       "Built 20+ React components for forms, data grids and charts.",
     ],
-    responsabilities: [
+    responsibilities: [
       "MVP",
       "Project foundation",
       "Frontend Dashboard",
@@ -159,7 +163,7 @@ export const experiences: Experience[] = [
       "Create reusable components with TWIG engine",
       "Integrated the totality of the UI for <a href='https://institutcochin.fr/' target='_blank'><u>www.institutcochin.fr</u> </a>",
     ],
-    responsabilities: ["UI integration", "TWIG Blocks"],
+    responsibilities: ["UI integration", "TWIG Blocks"],
     stack: ["HTML", "SCSS", "Javascript", "Webpack", "TWIG", "Drupal"],
     tools: ["Redmine", "Slack", "Sketch"],
   },
@@ -181,7 +185,7 @@ export type Experience = {
   endDate: string;
   remote: "Hybrid" | "On site" | "Full remote";
   description: string[];
-  responsabilities: string[];
+  responsibilities: string[];
   stack: string[];
   tools: string[];
 };
