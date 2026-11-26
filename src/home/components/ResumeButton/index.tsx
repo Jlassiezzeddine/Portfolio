@@ -12,7 +12,7 @@ import { Button } from "../../../shared/components/ui/button";
 const IS_EN_ONLY = true;
 function ResumeButton() {
   const event = ({ action, category, label, value }: any) => {
-    (window as any).gtag("event", action, {
+    (window as any).gtag?.("event", action, {
       event_category: category,
       event_label: label,
       value: value,
