@@ -33,6 +33,7 @@ npm run build
 - Hosted on Vercel. Every pull request gets a preview deploy, and merging to `main` deploys to production.
 - `main` is protected: changes go through a pull request and CI (lint, type check, build) must pass.
 - Dependabot opens dependency updates weekly (npm) and monthly (GitHub Actions).
+- AI code review (Greptile) runs only on PRs labelled `CI: Greptile review`; configured in `greptile.json`.
 
 ## Environment variables
 

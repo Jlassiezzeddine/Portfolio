@@ -1,0 +1,9 @@
+{
+  "labels": ["CI: Greptile review"],
+  "autoReview": ["open"],
+  "triggerOnDrafts": false,
+  "excludeAuthors": ["dependabot[bot]"],
+  "strictness": 2,
+  "ignorePatterns": "package-lock.json\npublic/**",
+  "instructions": "Next.js App Router portfolio. Focus on correctness, accessibility, SEO metadata and GDPR consent handling. Ignore stylistic nits."
+}
