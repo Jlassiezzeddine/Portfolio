@@ -1,3 +1,4 @@
+import { CookieConsent } from "@/shared/components/CookieConsent";
 import { ThemeProvider } from "@/shared/components/theme-provider";
 import { ThemeToggle } from "@/shared/components/theme-toggle";
 import { site } from "@/shared/data/site";
@@ -57,6 +58,7 @@ export default async function RootLayout({
             </div>
             {children}
           </main>
+          <CookieConsent />
         </ThemeProvider>
         <SpeedInsights />
       </body>

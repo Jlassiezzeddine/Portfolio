@@ -4,6 +4,7 @@ import { Button } from "@/shared/components/ui/button";
 import { contacts, social } from "@/shared/data/contact";
 import Image from "next/image";
 import Link from "next/link";
+import { CookieSettingsLink } from "@/shared/components/CookieConsent";
 import ResumeButton from "../ResumeButton";
 export default function Presentation() {
   return (
@@ -78,6 +79,15 @@ export default function Presentation() {
                 <Icon icon="email" size="md" />
               </Link>
             </Button>
+          </div>
+          <div className="mt-6 flex gap-4 text-xs text-muted-foreground">
+            <Link
+              href="/privacy"
+              className="hover:underline underline-offset-4"
+            >
+              Privacy
+            </Link>
+            <CookieSettingsLink className="cursor-pointer hover:underline underline-offset-4" />
           </div>
         </div>
       </div>
