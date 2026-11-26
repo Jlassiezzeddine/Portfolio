@@ -1,5 +1,7 @@
 import { ThemeProvider } from "@/shared/components/theme-provider";
 import { ThemeToggle } from "@/shared/components/theme-toggle";
+import { site } from "@/shared/data/site";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import GoogleAnalytics from "../shared/components/GoogleAnalytics";
@@ -9,9 +11,23 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ezzeddine Jlassi",
-  description:
-    "Fullstack developer with 4+ years of experience and a strong focus on frontend development, seeking to use my technical proficiency and creativity to develop engaging user experiences.",
+  metadataBase: new URL(site.url),
+  title: site.name,
+  description: site.description,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "profile",
+    url: "/",
+    siteName: site.name,
+    title: site.title,
+    description: site.description,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: site.title,
+    description: site.description,
+  },
   keywords: [
     "fullstack",
     "ReactJS",
@@ -42,6 +58,7 @@ export default async function RootLayout({
             {children}
           </main>
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
