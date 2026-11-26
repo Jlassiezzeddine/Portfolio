@@ -30,21 +30,19 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
-      <SmoothScroll />
-      <GoogleAnalytics />
-      <html lang="en" suppressHydrationWarning>
-        <body className={inter.className}>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <main className={"min-h-svh relative"}>
-              <div className="fixed top-4 right-4 lg:top-12 lg:right-12">
-                <ThemeToggle />
-              </div>
-              {children}
-            </main>
-          </ThemeProvider>
-        </body>
-      </html>
-    </>
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <SmoothScroll />
+        <GoogleAnalytics />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <main className={"min-h-svh relative"}>
+            <div className="fixed top-4 right-4 lg:top-12 lg:right-12">
+              <ThemeToggle />
+            </div>
+            {children}
+          </main>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
