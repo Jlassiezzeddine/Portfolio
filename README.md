@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+Personal portfolio of Ezzeddine Jlassi: <https://www.jlassiezzeddine.com>
 
-First, run the development server:
+## Stack
+
+Next.js (App Router, statically rendered) · React · TypeScript · Tailwind CSS v4 · shadcn/ui (Radix) · Lenis smooth scroll · next-themes
+
+## Run locally
+
+Requires Node 26 (see `.nvmrc`).
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm ci
+npm run dev        # http://localhost:3000
+npm run lint
+npx tsc --noEmit
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Updating content
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| What | Where |
+| --- | --- |
+| Work experience | `src/shared/data/experience.ts` |
+| Social links and contact details | `src/shared/data/contact.tsx` |
+| Resume PDFs | `public/pdfs/` |
+| Company logos | `public/logos/` |
+| Page title, description and keywords | `src/app/layout.tsx` (`metadata`) |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploys
 
-## Learn More
+- Hosted on Vercel. Every pull request gets a preview deploy, and merging to `main` deploys to production.
+- `main` is protected: changes go through a pull request and CI (lint, type check, build) must pass.
+- Dependabot opens dependency updates weekly (npm) and monthly (GitHub Actions).
 
-To learn more about Next.js, take a look at the following resources:
+## Environment variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Set these in Vercel → Project → Settings → Environment Variables.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Name | Purpose |
+| --- | --- |
+| `NEXT_PUBLIC_MEASUREMENT_ID` | Google Analytics 4 measurement ID. When it's unset, GA is disabled. |
 
-## Deploy on Vercel
+## Domain
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`jlassiezzeddine.com` redirects to `www.jlassiezzeddine.com`, the official address. DNS is managed at OVH, which also handles email (MX records), so don't move DNS without recreating those records first.
