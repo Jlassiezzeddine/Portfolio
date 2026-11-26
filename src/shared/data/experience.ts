@@ -35,9 +35,23 @@ export const experiences: Experience[] = [
     },
     remote: "Full remote",
     startDate: "Sep 2024",
-    endDate: "Juin 2025",
+    endDate: "Jun 2025",
     description: [
       "Using my technical proficiency and creativity to develop and maintain cool user experiences <a href='https://obrizum.com/' target='_blank'><u>@Obrizum</u></a>.",
+    ],
+    highlights: [
+      "Implement new features and update existing ones.",
+      "Bug fixes and outage interventions.",
+      "Technical debts assessment and performance improvement.",
+      "Peer code review and knowledge sharing.",
+      "Maintain dependencies.",
+      "Document new features.",
+    ],
+    achievements: [
+      "Contributed in the internationalization of <a href='https://obrizum.com/'>Obrizum learning platform</a>.",
+      "Built a custom type-safe useTranslation hook and Translate component (on top of i18next and react-i18next) and implemented eslint rules to provide seamless developer experience while dealing with internationalization.",
+      "Implemented accessibility standards to meet WCAG AA 2.0 using Axe-core and Playwright tests.",
+      "Enhanced app’s data flow and hydration by leveraging NextJS’s middleware and SSR.",
     ],
     responsibilities: [
       "I18n",
@@ -75,6 +89,12 @@ export const experiences: Experience[] = [
       "Build Obeyaka's <a href='https://www.obeyaka.com' target='_blank'><u>landing page</u></a>.",
       "Built 10+ features based on micro-frontends architecture using Next JS.",
     ],
+    highlights: [
+      "Participate in <a href='https://www.obeyaka.com'>Obeyaka</a> product discovery process and assess UX/UI designs for technical feasibility.",
+      "Develop modular, reusable code components to streamline development and maintenance.",
+      "Focus on improving user experience by optimizing UI elements and navigation flows.",
+      "Design-system implementation.",
+    ],
     responsibilities: [
       "MVP",
       "Project foundation",
@@ -96,6 +116,10 @@ export const experiences: Experience[] = [
     description: [
       "Built 8+ chart components using Fusion Charts, Chart.JS and D3.",
       "Built 10+ forms using React Hook Form",
+    ],
+    highlights: [
+      "Build React JS components based on Material UI for <a href='https://keibi.io'>Keibi.io</a> and Va-plan.",
+      "Optimize features using code splitting, lazy loading, and caching.",
     ],
     responsibilities: ["Feature integrations", "User experience"],
     stack: [
@@ -125,6 +149,12 @@ export const experiences: Experience[] = [
       "Deployed the first version of <a href='https://galdermatn.phalcon-crm.com' target='_blank'><u>Phalcon CRM</u></a>.",
       "Reduced server’s memory consumption by 30% which reduced the api response time by up to 400ms, by writing 14+ SQL views and implementing best practices to improve Entity Framework performance.",
       "Built 20+ React components for forms, data grids and charts.",
+    ],
+    location: "Ariana, Tunisia",
+    highlights: [
+      "Build a domain-driven api with a code-first database using .NET 6, Entity Framework and PostgreSQL.",
+      "Build a web application using React JS, Redux & Typescript.",
+      "Work in Agile development process.",
     ],
     responsibilities: [
       "MVP",
@@ -163,6 +193,14 @@ export const experiences: Experience[] = [
       "Create reusable components with TWIG engine",
       "Integrated the totality of the UI for <a href='https://institutcochin.fr/' target='_blank'><u>www.institutcochin.fr</u> </a>",
     ],
+    location: "Tunis, Tunisia",
+    highlights: [
+      "Develop a pixel perfect and responsive user interfaces.",
+      "Create reusable components with TWIG engine.",
+    ],
+    achievements: [
+      "Integrated the totality of the UI for <a href='https://institutcochin.fr/'>www.institutcochin.fr</a>.",
+    ],
     responsibilities: ["UI integration", "TWIG Blocks"],
     stack: ["HTML", "SCSS", "Javascript", "Webpack", "TWIG", "Drupal"],
     tools: ["Redmine", "Slack", "Sketch"],
@@ -186,6 +224,12 @@ export type Experience = {
   remote: "Hybrid" | "On site" | "Full remote";
   description: string[];
   responsibilities: string[];
+  /** CV only: shown instead of the remote type. */
+  location?: string;
+  /** CV only: main bullets. Without it the CV uses `description` then `responsibilities`. */
+  highlights?: string[];
+  /** CV only: "Key Achievements". Without it (and with `highlights`) the CV uses `description`. */
+  achievements?: string[];
   stack: string[];
   tools: string[];
 };

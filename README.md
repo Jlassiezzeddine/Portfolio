@@ -24,7 +24,8 @@ npm run build
 | --- | --- |
 | Work experience | `src/shared/data/experience.ts` |
 | Social links and contact details | `src/shared/data/contact.tsx` |
-| Resume PDFs | `public/pdfs/` |
+| Resume PDF | Generated at build time from the data files (`src/cv/CvDocument.tsx`), served at `/pdfs/EN_Ezzeddine_Jlassi_CV.pdf` |
+| CV-only content: skills, education, languages | `src/shared/data/skills.ts`, `education.ts`, `languages.ts`; CV fields `highlights`, `achievements`, `location` in `experience.ts` |
 | Company logos | `public/logos/` |
 | Page title, description and keywords | `src/app/layout.tsx` (`metadata`) |
 
